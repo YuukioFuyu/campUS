@@ -11,7 +11,7 @@ Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
 ## Our Lecture
 <p align="center" valign="top" width="30%">
   <a href="hepidad.github.io"></a>
-  <img src="https://media.licdn.com/dms/image/C5603AQE4A3WARH9imA/profile-displayphoto-shrink_800_800/0/1625544749335?e=2147483647&v=beta&t=959ypUT1L34lPjovI6cTMzWiRU3ljb3FfKHzYNX26rQ" width="300px;" alt="Irwan Kautsar"/><br />
+  <img src="https://media.licdn.com/dms/image/C5603AQE4A3WARH9imA/profile-displayphoto-shrink_800_800/0/1625544749335?e=2147483647&v=beta&t=959ypUT1L34lPjovI6cTMzWiRU3ljb3FfKHzYNX26rQ" width="30%" alt="Irwan Kautsar"/><br />
     <b>Irwan Alnarus Kautsar</b><br />
     <b><i>Lecture</i></b>
 </p>
@@ -22,21 +22,21 @@ Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
   <tbody>
   </tbody>
     <tr>
-      <td align="center" valign="top" width="300px">
-        <a href="https://yuuki0.net"><img src="https://avatars.githubusercontent.com/u/79379934?v=4?s=100" width="300px" alt="ゆうきお ふゆ"/></a><br />
+      <td align="center" valign="top" width="30%">
+        <a href="https://yuuki0.net"><img src="https://avatars.githubusercontent.com/u/79379934?v=4?s=100" width="100%" alt="ゆうきお ふゆ"/></a><br />
         <b>ゆうきお ふゆ</b><br />
         <b><i>Back-End & Database</i></b>
       </td>
-      <td align="center" valign="top" width="300px">
+      <td align="center" valign="top" width="30%">
         <a href="https://github.com/AlvitoDian">
-          <img src="https://avatars.githubusercontent.com/u/132731944?v=4?s=100" width="300px" alt="Alvito Dian Pratama Putra"/>
+          <img src="https://avatars.githubusercontent.com/u/132731944?v=4?s=100" width="100%" alt="Alvito Dian Pratama Putra"/>
         </a><br />
         <b>Alvito Dian Pratama Putra</b><br />
         <b><i>Back-End & Bug Hunter</i></b>
       </td>
-      <td align="center" valign="top" width="300px">
+      <td align="center" valign="top" width="30%">
         <a href="https://github.com/rayhanantha">
-          <img src="https://avatars.githubusercontent.com/u/111292920?v=4?s=100" width="300px" alt="Rayhanantha Akbar Putra Prasetyo"/>
+          <img src="https://avatars.githubusercontent.com/u/111292920?v=4?s=100" width="100%" alt="Rayhanantha Akbar Putra Prasetyo"/>
         </a><br />
         <b>Rayhanantha Akbar</b><br />
         <b><i>Front-End & UI/UX</i></b>
