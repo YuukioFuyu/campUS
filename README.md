@@ -10,7 +10,7 @@ Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
 
 ## Our Lecture
 <p align="center" valign="top" width="30%">
-  <a href="hepidad.github.io"><img src="https://media.licdn.com/dms/image/C5603AQE4A3WARH9imA/profile-displayphoto-shrink_800_800/0/1625544749335?e=2147483647&v=beta&t=959ypUT1L34lPjovI6cTMzWiRU3ljb3FfKHzYNX26rQ" width="30%" alt="Irwan Kautsar"/></a><br />
+  <a href="https://hepidad.github.io"><img src="https://media.licdn.com/dms/image/C5603AQE4A3WARH9imA/profile-displayphoto-shrink_800_800/0/1625544749335?e=2147483647&v=beta&t=959ypUT1L34lPjovI6cTMzWiRU3ljb3FfKHzYNX26rQ" width="30%" alt="Irwan Kautsar"/></a><br />
     <b>Irwan Alnarus Kautsar</b><br />
     <b><i>Lecture</i></b>
 </p>
