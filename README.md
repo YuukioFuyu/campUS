@@ -1,9 +1,112 @@
 # campUS
 Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
 <hr>
-This is the Network Security Class's Final Project.<br />
-This software demonstrates how simple it can be to create a web application using Python Flask.<br />
-It is a basic Message C.R.U.D. application with RSA Encryption applied to each message stored in the database.<br />
-<br />
-Please Wait... Our FrontEnd is in the process of designing the UI<br />
-<img src="https://github.com/YuukioFuyu/campUS/assets/79379934/4ced66ec-02dc-422d-9102-a5f4b9cfe676" width="100">
+
+## Dependency
+
+-   Python3
+-   PostgreSQL
+
+## Pre-Installation
+
+1. Clone this repository
+
+```bash
+git clone https://github.com/YuukioFuyu/campUS.git
+```
+
+2. Install python3 & venv
+
+```bash
+sudo dnf install python3 python3-venv
+```
+
+3. Install postgreSQL database
+
+```bash
+sudo dnf install postgresql14-server
+```
+
+4. Setup postgreSQL
+
+```bash
+sudo /usr/pgsql-14/bin/postgresql-14-setup initdb
+```
+
+5. Enable postgreSQL services
+
+```bash
+sudo systemctl enable --now postgresql-14
+```
+
+6. Create database
+
+```bash
+psql -U postgres
+```
+```bash
+create database messages;
+```
+```bash
+\q
+```
+
+7. Import database
+
+```bash
+psql -U postgres messages < messages.psql
+```
+
+## Installation
+
+1. Create venv directory
+
+```bash
+python3 -m venv [path to venv]
+```
+
+2. Enable venv
+
+```bash
+source [path to venv]/bin/activate
+```
+
+3. Install requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Edit app.py
+
+### Customise with your settings
+- app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://[DATABASE USER]:[PASSWORD]@[IP SERVER]/[DATABASE NAME]'
+- app.secret_key = 'YOUR SECRET KEY'
+
+5. Save and exit app.py
+
+6. Run the program
+
+```bash
+python3 ./app.py
+```
+
+7. Access via browser on localhost / http://127.0.0.1
+
+<hr>
+
+### Default Login:
+#### Administrator
+| Username | Password |
+|  ------- | -------- |
+|   admin  |   admin  |
+
+#### Student 1
+| Username | Password |
+|  ------- | -------- |
+|    mhs1  |    mhs1  |
+
+#### Student 2
+| Username | Password |
+|  ------- | -------- |
+|    mhs2  |    mhs2  |
