@@ -1,0 +1,103 @@
+:root {
+	color: #000;
+}
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background: linear-gradient(
+		145deg,
+		rgb(154, 125, 250) 0%,
+		rgb(112, 217, 230) 100%
+	);
+	background-repeat: no-repeat;
+	padding: 4em 4em 4em 0;
+}
+
+.animate-title-left {
+	position: relative;
+	opacity: 0;
+	animation: 1s forwards fadeFromLeft ease-out;
+}
+
+.animate-motto-left {
+	position: relative;
+	opacity: 0;
+	animation: 1s forwards fadeFromLeft ease-out;
+	animation-delay: 0.3s;
+}
+
+@keyframes fadeFromLeft {
+	0% {
+		left: -100px;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
+	}
+}
+
+#field {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	margin: 2.5em 0 2.5em 0;
+	width: 30vw;
+}
+
+input[type="text"],
+input[type="password"] {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	border-bottom: 1px solid;
+}
+
+label {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: -2px;
+	top: 0;
+	cursor: text;
+	pointer-events: none;
+	transition: 0.3s ease-out;
+}
+
+input[type="text"],
+input[type="password"],
+label {
+	font-size: 1.5em;
+	font-size: 1.5em;
+	width: 100%;
+	height: 55px;
+}
+
+input[type="text"]:focus + label,
+input[type="text"]:valid + label,
+input[type="password"]:focus + label,
+input[type="password"]:valid + label {
+	font-size: 1em;
+	top: -25px;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+	display: none;
+}
+
+#field input,
+label {
+	transition: 0.3s ease-out;
+}
+
+.login-btn {
+	box-shadow: 5px 2px 20px 0 rgba(0, 0, 0, 0.2),
+		inset -2px -2px 8px 0 rgba(0, 0, 0, 0.5);
+}
