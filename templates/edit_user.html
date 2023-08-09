@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="h-full">
+<head>
+    <title>Edit Pengguna</title>
+    <link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='output.css') }}"
+		/>
+</head>
+<body class="w-full h-full">
+  <div>
+    <h1 class="text-3xl p-5 py-10 text-violet-700 dark:text-white">
+			USER
+			<span class="flex-grow text-white drop-shadow-lg dark:text-violet-600"
+				>{{ user.nama }}</span
+			>
+		</h1>
+  </div>
+  <div class="flex flex-col items-center mx-auto px-8 py-8 rounded-md bg-violet-900 max-w-[90vw] w-fit">
+    <h2 class="text-2xl text-white text-center py-4 md:text-4xl">
+				Ubah Informasi Profil
+		</h2>
+    <form class="z-0 flex flex-col gap-y-4 min-w-[20vw] max-w-[80vw] mx-auto bg-violet-600 rounded-lg p-6 drop-shadow-lg dark:drop-shadow-none dark:bg-transparent" method="POST" action="{{ url_for('edit_user', user_id=user.id) }}">
+      <div class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]">
+        <label class="text-white" for="username">Username</label>
+        <input class="outline-none cursor-text min-w-[220px] max-w-[650px] p-2 rounded-md bg-slate-100 dark:text-slate-900" type="text" id="username" name="username" value="{{ user.username }}">
+      </div>
+      <div class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]">
+        <label class="text-white" for="nama">Nickname</label>
+        <input class="outline-none cursor-text min-w-[220px] max-w-[650px] p-2 rounded-md bg-slate-100 dark:text-slate-900" type="text" id="nama" name="nama" value="{{ user.nama }}">
+      </div>
+      <div class="relative text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]">
+        <label class="text-white" for="password">Password</label>
+        <input class="outline-none cursor-text min-w-[220px] max-w-[650px] p-2 rounded-md bg-slate-100 dark:text-slate-900" type="password" id="password" name="password">
+        <ion-icon
+            name="eye-outline"
+			class="absolute right-2 bottom-3 inline-block text-xl cursor-pointer dark:text-slate-900 md:text-3xl md:bottom-2"
+			id="eye"
+        ></ion-icon>
+      </div>
+      <div class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]">
+        <label class="text-white" for="confirm_password">Confirm Password</label>
+        <input class="outline-none cursor-text min-w-[220px] max-w-[650px] p-2 rounded-md bg-slate-100 dark:text-slate-900" type="password" id="confirm_password" name="confirm_password">
+      </div>
+      <div class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]">
+        <label class="text-white" for="role">Role</label>
+        <select class="min-w-[220px] max-w-[500px] p-2 appearance-none rounded-md outline-none dark:bg-white dark:text-slate-900" id="role" name="role">
+          <option value="admin" {% if user.role == 'admin' %}selected{% endif %}>Admin/Dosen/Staff</option>
+          <option value="mahasiswa" {% if user.role == 'mahasiswa' %}selected{% endif %}>Mahasiswa</option>
+        </select>
+      </div>
+      <div class="flex w-full gap-x-5">
+        <input class="@btn @btn-success @btn-md text-xl font-bold md:@btn-lg" type="submit" value="Simpan" />
+        <a class="@btn @btn-error @btn-md text-xl font-bold md:@btn-lg" href="{{ url_for('users') }}">Cancel</a>
+      </div>
+    </form>
+  </div>
+  <script
+    type="module"
+	src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+	nomodule
+	src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="{{ url_for('static', filename='js/user.js') }}"></script>
+</body>
+</html>

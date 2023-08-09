@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="h-full">
+	<head>
+		<title>Dashboard</title>
+		<link
+			rel="shortcut icon"
+			href="{{ url_for('static', filename='favicon/favicon.ico') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='output.css') }}"
+		/>
+	</head>
+	<body class="w-full h-full">
+		<nav id="nav-bar" class="flex flex-col">
+			<div
+				id="icon-wrap"
+				class="z-[20] drop-shadow-md m-3 absolute right-0 duration-300"
+			>
+				<ion-icon
+					class="text-violet-700 dark:text-violet-400 p-3 shadow-md @btn @btn-sm @btn-circle md:hidden"
+					id="menu-click"
+					name="menu"
+				></ion-icon>
+			</div>
+			<div
+				id="menu-nav"
+				class="menu-inactive z-[10] gap-y-5 flex flex-col w-full p-5 fixed top-0 left-0 duration-[.8s] ease-in-out rounded-tr-lg rounded-br-lg bg-white shadow-md md:shadow-none md:flex-row md:sticky md:bg-transparent md:p-0 md:opacity-100"
+			>
+				<div
+					class="flex-grow text-[2em] py-5 px-5 w-fit h-fit rounded-lg bg-violet-950 md:bg-transparent md:p-5"
+					id="role-box"
+				>
+					<span class="shine-text uppercase" id="role-profile"
+						>{{current_user.role}}</span
+					>
+				</div>
+				<div
+					class="uppercase flex flex-col rounded-bl-lg gap-y-10 py-8 bg-white md:shadow-lg text-violet-600 md:flex-row md:gap-x-10 md:items-center md:px-12 md:py-4"
+				>
+					<span
+						class="text-3xl text-underline-hover h-[45px] md:text-xl lg:text-2xl md:h-[38px]"
+						><a class="text-shadow" href="{{ url_for('index') }}">Home</a></span
+					>
+					<span
+						class="text-3xl text-underline-hover h-[45px] md:text-xl lg:text-2xl md:h-[38px]"
+						><a class="text-shadow" href="{{ url_for('profile') }}"
+							>Edit profile</a
+						></span
+					>
+					<span
+						class="text-3xl text-red-600 text-underline-hover h-[45px] md:text-xl lg:text-2xl md:h-[38px]"
+					>
+						<a class="text-shadow" href="/logout">Log out</a>
+					</span>
+				</div>
+			</div>
+		</nav>
+		<main>{% block content %}{% endblock content %}</main>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<script src="{{ url_for('static', filename='js/base.js') }}"></script>
+	</body>
+</html>

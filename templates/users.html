@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="h-full">
+	<head>
+		<title>Admin: USER LIST</title>
+		<link
+			rel="shortcut icon"
+			href="{{ url_for('static', filename='favicon/favicon.ico') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='output.css') }}"
+		/>
+	</head>
+	<body class="w-full h-full min-w-[400px]">
+		<a class="@btn @btn-primary m-4" href="{{ url_for('index') }}">
+			<ion-icon class="text-lg" name="arrow-back-outline"></ion-icon>
+			Kembali
+		</a>
+		<h1 class="text-center py-12 text-3xl md:text-4xl">USER LIST</h1>
+		<div
+			class="scrollbar scrollbar-track-slate-400 scrollbar-thumb-slate-600 scrollbar-w-2 scrollbar-track-rounded-md scrollbar-thumb-rounded-md container relative text-xl mx-auto h-[60vh] max-h-[60vh] min-w-[400px] max-w-[90vw] p-3 rounded-md overflow-hidden overflow-y-auto text-slate-600 bg-white dark:bg-transparent dark:text-white md:text-xl"
+		>
+			<table class="w-full">
+				<thead class="text-center">
+					<tr class="hidden md:grid md:grid-cols-8">
+						<th class="md:col-span-2">Username</th>
+						<th class="md:col-span-2">Nickname</th>
+						<th class="md:col-span-2">Role</th>
+						<th class="md:col-span-2">Action</th>
+					</tr>
+				</thead>
+				{% for user in users %}
+				<tbody>
+					<tr
+						class="break-all flex flex-col text-right justify-center items-start py-6 gap-y-3 w-[80vw] mx-auto md:text-center md:grid md:grid-cols-8 md:py-5 md:w-full md:items-center"
+					>
+						<td class="flex w-full md:col-span-2">
+							<span class="contents items-end md:hidden">Username:</span>
+							<span class="flex-grow">{{ user.username }}</span>
+						</td>
+						<td class="flex w-full md:col-span-2">
+							<span class="contents items-end md:hidden">Nickname:</span>
+							<span class="flex-grow">{{ user.nama }}</span>
+						</td>
+						<td class="flex w-full md:col-span-2">
+							<span class="contents items-end md:hidden">Role:</span>
+							<span class="flex-grow">{{ user.role }}</span>
+						</td>
+						<td class="flex w-full md:justify-center md:col-span-2">
+							<div class="flex flex-row gap-x-3 md:justify-center">
+								<a
+									class="@btn @btn-md @btn-success font-bold"
+									href="{{ url_for('edit_user', user_id=user.id) }}"
+									>Edit</a
+								>
+								<form
+									action="{{ url_for('delete_user', user_id=user.id) }}"
+									method="POST"
+									onsubmit="return confirm('Yakin ?')"
+								>
+									<button
+										class="@btn @btn-md @btn-error font-bold"
+										type="submit"
+									>
+										Hapus
+									</button>
+								</form>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+				{% endfor %}
+			</table>
+		</div>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+	</body>
+</html>

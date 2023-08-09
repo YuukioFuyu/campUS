@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+	<h1 class="text-center py-10 text-4xl">Edit Message</h1>
+	<form
+		class="z-0 flex flex-col gap-y-4 max-w-[70vw] mx-auto bg-violet-600 rounded-lg p-6 drop-shadow-lg dark:drop-shadow-none dark:bg-transparent"
+		action="{{ url_for('edit', id=message.id) }}"
+		method="POST"
+	>
+		<div class="text-2xl flex flex-col gap-y-1">
+			<label class="text-white" for="pengirim">Pengirim</label>
+			<input
+				class="outline-none cursor-default min-w-[220px] max-w-[500px] p-2 rounded-md"
+				type="text"
+				name="pengirim"
+				id="pengirim"
+				value="{{ message.pengirim }}"
+				required
+				readonly
+			/>
+		</div>
+		<div class="text-2xl flex flex-col gap-y-1">
+			<label class="text-white" for="penerima">Penerima</label>
+			<input
+				class="min-w-[220px] max-w-[500px] p-2 appearance-none rounded-md outline-none"
+				type="text"
+				name="penerima"
+				id="penerima"
+				value="{{ message.penerima }}"
+				required
+				readonly
+			/>
+		</div>
+		<div class="relative text-2xl flex flex-col gap-y-1">
+			<label class="text-white" for="pesan">Pesan</label>
+			<textarea
+				class="resize-none h-[100vh] max-h-[40vh] max-w-full min-w-[220px] w-full rounded-md outline-none p-3 text-lg md:h-[30vh]"
+				name="pesan"
+				id="pesan"
+				maxlength="700"
+				placeholder="{{ message.pesan }}"
+				required
+			>
+{{ message.pesan }}</textarea
+			>
+			<span
+				class="absolute -bottom-7 right-2 text-base opacity-100 dark:opacity-30"
+				id="pesan-counter"
+				>0 / 700</span
+			>
+		</div>
+		<div>
+			<button
+				class="@btn @btn-success @btn-md text-xl font-bold md:@btn-lg"
+				type="submit"
+			>
+				Update
+			</button>
+		</div>
+	</form>
+</div>
+{% endblock %}

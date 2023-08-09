@@ -1,0 +1,104 @@
+{% extends 'base.html' %} {% block content %} {% if
+current_user.is_authenticated %}
+<div class="px-5 py-16 gap-y-4 flex flex-col items-center md:py-10 md:flex-row">
+	<h1 class="flex-grow text-4xl text-violet-600 dark:text-white">
+		Halo,
+		<span
+			class="flex-grow text-white drop-shadow-md dark:text-violet-600"
+			id="nickname"
+			>{{ current_user.nama }}</span
+		>
+	</h1>
+	<div>
+		<a
+			class="@btn @btn-md @btn-primary text-lg font-bold md:@btn-lg md:text-[1.5em]"
+			href="{{ url_for('create') }}"
+			>Send message</a
+		>
+	</div>
+</div>
+{% else %}
+<p>Kamu Belum Login, <a href="/login">login dulu</a></p>
+{% endif %} {% if messages %}
+<div class="text-3xl text-center w-full py-6">
+	<h2>MESSAGES</h2>
+</div>
+<div
+	class="scrollbar scrollbar-track-slate-400 scrollbar-thumb-slate-600 scrollbar-w-2 scrollbar-track-rounded-md scrollbar-thumb-rounded-md container relative text-xl mx-auto h-[60vh] max-h-[60vh] min-w-[400px] max-w-[90vw] p-3 rounded-md overflow-hidden overflow-y-auto text-slate-600 bg-white dark:bg-transparent dark:text-white md:text-xl"
+>
+	<table class="w-full">
+		<thead class="text-center">
+			<tr class="hidden md:grid md:grid-cols-11">
+				<th>No</th>
+				<th class="md:col-span-2">Sender</th>
+				<th class="md:col-span-2">Receiver</th>
+				<th class="md:col-span-2">Message</th>
+				<th class="md:col-span-2">Reply</th>
+				<th class="md:col-span-2">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for message in messages %}
+			<tr
+				class="break-all flex flex-col text-right justify-center items-start py-6 gap-y-3 w-[80vw] mx-auto md:text-center md:grid md:grid-cols-11 md:py-5 md:w-full md:items-center"
+			>
+				<td class="flex w-full">
+					<span class="contents items-end md:hidden">No:</span>
+					<span class="nomor flex-grow">{{ loop.index }}</span>
+				</td>
+				<td class="flex w-full md:col-span-2">
+					<span class="contents items-end md:hidden">Sender:</span>
+					<span class="flex-grow">{{ message.pengirim }}</span>
+				</td>
+				<td class="flex w-full md:col-span-2">
+					<span class="contents items-end md:hidden">Receiver:</span>
+					<span class="flex-grow">{{ message.penerima }}</span>
+				</td>
+				<td class="md:col-span-2">
+					<div>{% include "message.html" %}</div>
+				</td>
+				<td class="md:col-span-2">
+					{% if message.replies %}
+					<div>
+						{% for reply in message.replies %} {% include "replies.html" %} {%
+						endfor %}
+					</div>
+					{% else %}
+					<p>No reply</p>
+					{% endif %}
+				</td>
+				<td class="md:col-span-2">
+					<div class="flex flex-row gap-x-3 md:justify-center">
+						<a
+							role="button"
+							class="@btn @btn-success @btn-md font-bold md:@btn-sm"
+							href="{{ url_for('edit', id=message.id) }}"
+							>Edit</a
+						>
+						<a
+							role="button"
+							class="@btn @btn-error @btn-md font-bold md:@btn-sm"
+							href="{{ url_for('delete', id=message.id) }}"
+							>Delete</a
+						>
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<div
+	class="container mx-auto flex flex-col justify-center h-[50vh] text-center text-4xl md:items-center md:flex-row"
+	id="no-msg-wrapper"
+>
+	<h1
+		class="text-white drop-shadow-lg dark:text-violet-600"
+		id="no-message-text"
+	>
+		NO MESSAGES
+	</h1>
+</div>
+<script src="{{ url_for('static', filename='js/no.js') }}"></script>
+{% endif %} {% endblock %}

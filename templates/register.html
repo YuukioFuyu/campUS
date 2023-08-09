@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="h-full">
+	<head>
+		<title>Login Page</title>
+		<link
+			rel="shortcut icon"
+			href="{{ url_for('static', filename='favicon/favicon.ico') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='output.css') }}"
+		/>
+	</head>
+	<body class="h-full w-full flex justify-center items-center">
+		<div
+			class="mx-auto my-auto px-8 py-8 rounded-md bg-purple-500 max-w-fit dark:bg-purple-950"
+		>
+			<h2 class="text-2xl text-white text-center py-4 md:text-4xl">
+				REGISTRATION
+			</h2>
+			<form class="flex flex-col gap-y-5" action="/register" method="POST">
+				<div
+					class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]"
+					id="field"
+				>
+					<label class="text-white" for="nama">Nickname</label>
+					<input
+						class="outline-none cursor-text min-w-[220px] max-w-[650px] p-2 rounded-md bg-slate-100 dark:text-slate-900"
+						type="text"
+						id="nama"
+						name="nama"
+					/>
+				</div>
+				<div
+					class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]"
+					id="field"
+				>
+					<label class="text-white" for="username">Username</label>
+					<input
+						class="outline-none cursor-text min-w-[220px] max-w-[650px] w-full p-2 rounded-md bg-slate-100 dark:text-slate-900"
+						type="text"
+						id="username"
+						name="username"
+					/>
+				</div>
+				<div
+					class="relative text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]"
+					id="field"
+				>
+					<label class="text-white" for="password">Password</label>
+					<input
+						class="outline-none cursor-text min-w-[220px] max-w-[650px] p-2 rounded-md bg-slate-100 dark:text-slate-900"
+						type="password"
+						id="password"
+						name="password"
+					/>
+					<ion-icon
+						name="eye-outline"
+						class="absolute right-2 bottom-3 inline-block text-xl cursor-pointer dark:text-slate-900 md:text-3xl md:bottom-2"
+						id="eye"
+					></ion-icon>
+				</div>
+				<div
+					class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]"
+					id="field"
+				>
+					<label class="text-white" for="confirm_password"
+						>Verify Password</label
+					>
+					<input
+						class="outline-none cursor-text min-w-[220px] max-w-[650px] p-2 rounded-md bg-slate-100 dark:text-slate-900"
+						type="password"
+						id="confirm_password"
+						name="confirm_password"
+					/>
+				</div>
+				<div class="flex flex-col gap-y-5" id="field">
+					<div class="flex gap-x-1 text-white md:text-2xl" id="have-account">
+						<h2>Have an account?</h2>
+						<a
+							class="text-violet-800 underline-offset-0 duration-300 hover:text-white hover:underline hover:underline-offset-4 dark:hover:text-violet-500 dark:text-white"
+							href="/login"
+							>Login here</a
+						>
+					</div>
+					<input
+						class="@btn @btn-primary @btn-md font-bold text-base md:@btn-lg md:text-2xl"
+						type="submit"
+						value="Register"
+					/>
+				</div>
+				{% if error_message %}
+				<div id="error-message">{{ error_message }}</div>
+				{% endif %}
+			</form>
+		</div>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<script src="./static/js/register.js"></script>
+	</body>
+</html>

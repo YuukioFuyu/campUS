@@ -1,0 +1,20 @@
+<button
+	class="@btn @btn-outline @btn-info @btn-lg font-lato font-bold text-xl md:text-base md:@btn-md"
+	onclick="replyModal{{message.id}}.showModal()"
+>
+	Open <span class="md:hidden">Reply</span>
+</button>
+<dialog
+	id="replyModal{{message.id}}"
+	class="message-modal @modal text-left dark:text-white"
+>
+	<form method="dialog" class="@modal-box max-w-5xl w-11/12">
+		<button class="@btn @btn-sm @btn-circle @btn-ghost absolute right-2 top-2">
+			✕
+		</button>
+		<h3 class="font-bold text-lg">PESAN</h3>
+		<p class="py-4 break-all overflow-y-auto overflow-x-hidden">
+			{{ reply.pesan }}
+		</p>
+	</form>
+</dialog>

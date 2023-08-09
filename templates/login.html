@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="h-[1940px] md:h-full">
+	<head>
+		<title>Login Page</title>
+		<link
+			rel="shortcut icon"
+			href="{{ url_for('static', filename='favicon/favicon.ico') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{url_for('static', filename='output.css')}}"
+		/>
+	</head>
+	<body class="p-5 w-full h-full">
+		<div
+			class="h-[1920px] relative flex flex-col items-center transition-all duration-300 md:flex-row md:h-full"
+		>
+			<div
+				class="text-transparent relative flex flex-col justify-center items-center my-10 px-5 text-5xl flex-grow h-[1710px] md:h-fit md:text-6xl md:my-0"
+				id="app-title"
+			>
+				<h1
+					class="dark:bg-gradient-to-br dark:from-white dark:to-purple-400 bg-gradient-to-tl from-purple-700 to-pink-400 bg-clip-text my-2 animate-delay-fade-intop opacity-0 md:my-3 md:opacity-100 md:animate-fade-inleft"
+				>
+					campUS
+				</h1>
+				<span
+					class="dark:from-white dark:to-purple-400 bg-gradient-to-tl from-purple-700 to-pink-400 bg-clip-text text-[40%] text-center animate-fade-intop md:text-[50%] md:my-3 md:opacity-0 md:animate-delay-fade-inleft"
+					>Tell it to your university, make it better, make it easier</span
+				>
+				<ion-icon
+					class="text-white absolute bottom-14 cursor-pointer md:invisible"
+					id="down-scroll"
+					name="chevron-down-outline"
+				></ion-icon>
+			</div>
+			<section
+				class="relative flex flex-col gap-y-8 h-full justify-center px-10 md:px-32"
+				id="login-panel"
+			>
+				<h2 class="my-3 text-center text-[2em]">
+					Welcome to <span class="text-purple-500">campUS</span>!
+				</h2>
+				<form class="flex flex-col gap-y-8" action="/login" method="POST">
+					<div class="relative" id="field">
+						<input
+							class="peer/username text-[1.5em] p-2 outline-none border-none w-full rounded-md"
+							type="text"
+							id="username"
+							name="username"
+							required
+						/>
+						<label
+							class="cursor-text text-[1.5em] w-full p-2 peer-focus/username:text-[1em] peer-focus/username:top-[-35px] peer-valid/username:text-[1em] peer-valid/username:top-[-35px] peer-focus/username:left-[-5px] peer-valid/username:left-[-5px] absolute left-0 top-0 pointer-events-none duration-300"
+							for="username"
+							>Username</label
+						>
+					</div>
+					<div class="relative" id="field">
+						<input
+							class="peer/password text-[1.5em] p-2 pr-12 outline-none border-none w-full rounded-md"
+							type="password"
+							id="password"
+							name="password"
+							required
+						/>
+						<label
+							class="cursor-text text-[1.5em] w-full p-2 box-border peer-focus/password:text-[1em] peer-focus/password:top-[-35px] peer-valid/password:text-[1em] peer-valid/password:top-[-35px] peer-focus/password:left-[-5px] peer-valid/password:left-[-5px] absolute left-0 top-0 pointer-events-none duration-300"
+							for="password"
+							>Password</label
+						>
+						<ion-icon
+							name="eye-outline"
+							class="absolute right-[10px] transform -translate-y-10 inline-block text-[2em] cursor-pointer"
+							id="eye"
+						></ion-icon>
+						<a
+							class="text-lg dark:text-white dark:hover:text-purple-500 hover:text-violet-700 hover:underline underline-offset-0 hover:underline-offset-4 duration-300"
+							href=""
+							>Forgot your password?</a
+						>
+					</div>
+					<div class="@btn @btn-primary" id="field">
+						<input class="text-xl" type="submit" value="Login" />
+					</div>
+					<div
+						class="flex flex-col justify-center items-center text-[1.5em]"
+						id="field"
+					>
+						<h2 class="text-xl" for="register">Don't have account?</h2>
+						<a
+							class="text-lg dark:text-purple-500 dark:hover:text-purple-700 text-white hover:text-indigo-700 duration-300"
+							href="/register"
+							>Register here</a
+						>
+					</div>
+					{% if error_message %}
+					<div id="error-message">{{ error_message }}</div>
+					{% endif %}
+				</form>
+			</section>
+		</div>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+	</body>
+</html>

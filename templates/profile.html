@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="h-full">
+	<head>
+		<title>User Profile</title>
+		<link
+			rel="shortcut icon"
+			href="{{ url_for('static', filename='favicon/favicon.ico') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='output.css') }}"
+		/>
+	</head>
+	<body class="w-full h-full">
+		<a class="@btn @btn-primary m-4" href="{{ url_for('index') }}">
+			<ion-icon class="text-lg" name="arrow-back-outline"></ion-icon>
+			Kembali
+		</a>
+		<h1 class="text-3xl p-5 py-10 text-violet-700 dark:text-white">
+			USER
+			<span class="flex-grow text-white drop-shadow-lg dark:text-violet-600"
+				>{{ user.nama }}</span
+			>
+		</h1>
+		{% with messages = get_flashed_messages() %} {% if messages %} {% for
+		message in messages %}
+		<div class="z-30 @toast @toast-top @toast-end">
+			<div class="@alert @alert-success">
+				<span>{{ message }}</span>
+			</div>
+		</div>
+		{% endfor %} {% endif %} {% endwith %}
+		<div
+			class="flex flex-col items-center mx-auto px-8 py-8 rounded-md bg-violet-900 max-w-[90vw] w-fit"
+		>
+			<h2 class="text-2xl text-white text-center py-4 md:text-4xl">
+				Ubah Informasi Profil
+			</h2>
+			<form
+				class="z-0 flex flex-col gap-y-4 min-w-[20vw] max-w-[80vw] mx-auto bg-violet-600 rounded-lg p-6 drop-shadow-lg dark:drop-shadow-none dark:bg-transparent"
+				method="POST"
+				action="/profile"
+			>
+				<div
+					class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]"
+				>
+					<label for="username_baru">Username</label>
+					<input
+						class="outline-none cursor-text min-w-[220px] max-w-[650px] w-full p-2 rounded-md bg-slate-100 dark:text-slate-900"
+						type="text"
+						id="username_baru"
+						name="username_baru"
+						value="{{ current_user.username }}"
+					/>
+				</div>
+				<div
+					class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]"
+				>
+					<label for="nama_baru">Full Name</label>
+					<input
+						class="outline-none cursor-text min-w-[220px] max-w-[650px] p-2 rounded-md bg-slate-100 dark:text-slate-900"
+						type="text"
+						id="nama_baru"
+						name="nama_baru"
+						value="{{ current_user.nama }}"
+					/>
+				</div>
+				<div
+					class="relative text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]"
+				>
+					<label for="password_baru">Password</label>
+					<input
+						class="outline-none cursor-text min-w-[220px] max-w-[650px] p-2 rounded-md bg-slate-100 dark:text-slate-900"
+						type="password"
+						id="password_baru"
+						name="password_baru"
+					/>
+					<ion-icon
+						name="eye-outline"
+						class="absolute right-2 bottom-3 inline-block text-xl cursor-pointer dark:text-slate-900 md:text-3xl md:bottom-2"
+						id="eye"
+					></ion-icon>
+				</div>
+				<div
+					class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]"
+				>
+					<label for="confirm_password">Password Confirm</label>
+					<input
+						class="outline-none cursor-text min-w-[220px] max-w-[650px] p-2 rounded-md bg-slate-100 dark:text-slate-900"
+						type="password"
+						id="confirm_password"
+						name="confirm_password"
+					/>
+				</div>
+				<div
+					class="text-lg flex flex-col gap-y-1 max-w-[650px] md:text-2xl md:w-[500px]"
+				>
+					<label for="user-role">Role</label>
+					<span class="min-w-[220px] max-w-[650px] rounded-md uppercase"
+						>{{ current_user.role }}</span
+					>
+				</div>
+				<div class="flex flex-col gap-y-1 w-max">
+					<button
+						class="@btn @btn-success text-lg font-bold md:text-xl"
+						type="submit"
+					>
+						Update
+					</button>
+				</div>
+			</form>
+		</div>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+	</body>
+</html>
