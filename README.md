@@ -1,6 +1,22 @@
 # campUS
 Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
 
+## Our Lecture
+<td align="center" valign="top" width="30%"><a href="hepidad.github.io"><img src="https://media.licdn.com/dms/image/C5603AQE4A3WARH9imA/profile-displayphoto-shrink_800_800/0/1625544749335?e=2147483647&v=beta&t=959ypUT1L34lPjovI6cTMzWiRU3ljb3FfKHzYNX26rQ" width="300px;" alt="Irwan Kautsar"/><br /><sub><b>Irwan Kautsar</b></sub></a><br /><i>Back-End & Database</i></td>
+
+## Our Team
+
+<table>
+  <tbody>
+  </tbody>
+    <tr>
+      <td align="center" valign="top" width="30%"><a href="https://yuuki0.net"><img src="https://avatars.githubusercontent.com/u/79379934?v=4?s=100" width="300px;" alt="ゆうきお ふゆ"/><br /><sub><b>ゆうきお ふゆ</b></sub></a><br /><i>Back-End & Database</i></td>
+      <td align="center" valign="top" width="30%"><a href="https://github.com/AlvitoDian"><img src="https://avatars.githubusercontent.com/u/132731944?v=4?s=100" width="300px;" alt="Alvito Dian Pratama Putra"/><br /><sub><b>Alvito Dian Pratama Putra</b></sub></a><br /><i>Back-End & Bug Hunter</i></td>
+      <td align="center" valign="top" width="30%"><a href="https://github.com/rayhanantha"><img src="https://avatars.githubusercontent.com/u/111292920?v=4?s=100" width="300px;" alt="Rayhanantha Akbar Putra Prasetyo"/><br /><sub><b>Rayhanantha Akbar Putra Prasetyo</b></sub></a><br /><i>Front-End & UI/UX</i></td>
+    </tr>
+  </tbody>
+</table>
+
 ![image](https://github.com/YuukioFuyu/campUS/assets/79379934/06decb16-9d05-4eed-ad16-9be968e40a5d)
 ![image](https://github.com/YuukioFuyu/campUS/assets/79379934/6241d387-1949-4acb-a954-36be777bb717)
 
