@@ -6,16 +6,25 @@
 
 
 # campUS
-Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
+Hey there, lovely peeps! So, imagine this super cool app, like, totally made for all you awesome students out there! 😄 It's, like, a special secret place where you can share your thoughts, questions, or anything with your super cool professors or, like, the big boss, the rector! And guess what? All your messages get this super-duper secret code, so, like, only the magical beings with the right key can read 'em! 🔐✨
 
-## Our Lecture
+And, like, your precious messages? They're all snuggled up, safe and sound, in this super fancy database called PostgreSQL. Ain't that cool? 📚🔒
+
+Oh, and here comes the magical part! Professors and the rector, they got the VIP pass to see all the messages, like, from everyone. But you, sweet student, you only see your own messages, just yours! 😇💌
+
+So, like, why's this here? Well, it's, like, this amazing project for the super smart Computer Security class! It's all about making sure your stuff stays safe and protected while you talk to your profs and the big boss. 🌟💻
+
+In a nutshell, this app is like a cozy corner where students and, like, the super cool academic folks can chat all safe and sound. With messages all coded up and a special safe home for 'em, this app is like a big warm hug for keeping secrets safe. 🤗💌✨
+
+
+## Our Lecture 💪
 <p align="center" valign="top" width="30%">
   <a href="https://hepidad.github.io"><img src="https://media.licdn.com/dms/image/C5603AQE4A3WARH9imA/profile-displayphoto-shrink_800_800/0/1625544749335?e=2147483647&v=beta&t=959ypUT1L34lPjovI6cTMzWiRU3ljb3FfKHzYNX26rQ" width="30%" alt="Irwan Kautsar"/></a><br />
     <b>Irwan Alnarus Kautsar</b><br />
     <b><i>Lecture</i></b>
 </p>
 
-## Our Team
+## Our Team 🤝
 
 <table>
   <tbody>
@@ -46,7 +55,7 @@ Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
 
 <hr>
 
-## Screenshots
+## Screenshots 💻
 
 ![image](https://github.com/YuukioFuyu/campUS/assets/79379934/06decb16-9d05-4eed-ad16-9be968e40a5d)
 ![image](https://github.com/YuukioFuyu/campUS/assets/79379934/6241d387-1949-4acb-a954-36be777bb717)
