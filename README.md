@@ -1,8 +1,20 @@
+![Python](https://img.shields.io/badge/python-v3.11-black?style=for-the-badge&logo=python&labelColor=rgba(202%2C%20173%2C%200%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)
+![Flask](https://img.shields.io/badge/flask-v2.3.x-black?style=for-the-badge&logo=flask&labelColor=rgba(202%2C%20173%2C%200%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-v3.3.3-black?style=for-the-badge&logo=tailwindcss&labelColor=rgba(0%2C%20156%2C%20249%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)
+![DaisyUI](https://img.shields.io/badge/daisyui-v3.5.1-black?style=for-the-badge&logo=daisyui&labelColor=rgba(0%2C%20194%2C%2024%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)
+
+
+
 # campUS
 Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
 
 ## Our Lecture
-<td align="center" valign="top" width="30%"><a href="hepidad.github.io"><img src="https://media.licdn.com/dms/image/C5603AQE4A3WARH9imA/profile-displayphoto-shrink_800_800/0/1625544749335?e=2147483647&v=beta&t=959ypUT1L34lPjovI6cTMzWiRU3ljb3FfKHzYNX26rQ" width="300px;" alt="Irwan Kautsar"/><br /><sub><b>Irwan Kautsar</b></sub></a><br /><i>Back-End & Database</i></td>
+<p align="center" valign="top" width="30%">
+  <a href="hepidad.github.io"></a>
+  <img src="https://media.licdn.com/dms/image/C5603AQE4A3WARH9imA/profile-displayphoto-shrink_800_800/0/1625544749335?e=2147483647&v=beta&t=959ypUT1L34lPjovI6cTMzWiRU3ljb3FfKHzYNX26rQ" width="300px;" alt="Irwan Kautsar"/><br />
+    <b>Irwan Kautsar</b><br />
+    <b><i>Lecture</i></b>
+</p>
 
 ## Our Team
 
@@ -10,12 +22,31 @@ Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
   <tbody>
   </tbody>
     <tr>
-      <td align="center" valign="top" width="30%"><a href="https://yuuki0.net"><img src="https://avatars.githubusercontent.com/u/79379934?v=4?s=100" width="300px;" alt="ゆうきお ふゆ"/><br /><sub><b>ゆうきお ふゆ</b></sub></a><br /><i>Back-End & Database</i></td>
-      <td align="center" valign="top" width="30%"><a href="https://github.com/AlvitoDian"><img src="https://avatars.githubusercontent.com/u/132731944?v=4?s=100" width="300px;" alt="Alvito Dian Pratama Putra"/><br /><sub><b>Alvito Dian Pratama Putra</b></sub></a><br /><i>Back-End & Bug Hunter</i></td>
-      <td align="center" valign="top" width="30%"><a href="https://github.com/rayhanantha"><img src="https://avatars.githubusercontent.com/u/111292920?v=4?s=100" width="300px;" alt="Rayhanantha Akbar Putra Prasetyo"/><br /><sub><b>Rayhanantha Akbar Putra Prasetyo</b></sub></a><br /><i>Front-End & UI/UX</i></td>
+      <td align="center" valign="top" width="30%">
+        <a href="https://yuuki0.net"></a>
+        <img src="https://avatars.githubusercontent.com/u/79379934?v=4?s=100" width="300px;" alt="ゆうきお ふゆ"/><br />
+        <b>ゆうきお ふゆ</b><br />
+        <b><i>Back-End & Database</i></b>
+      </td>
+      <td align="center" valign="top" width="30%">
+        <a href="https://github.com/AlvitoDian"></a>
+        <img src="https://avatars.githubusercontent.com/u/132731944?v=4?s=100" width="300px;" alt="Alvito Dian Pratama Putra"/><br />
+        <b>Alvito Dian Pratama Putra</b><br />
+        <b><i>Back-End & Bug Hunter</i></b>
+      </td>
+      <td align="center" valign="top" width="30%">
+        <a href="https://github.com/rayhanantha"></a>
+        <img src="https://avatars.githubusercontent.com/u/111292920?v=4?s=100" width="300px;" alt="Rayhanantha Akbar Putra Prasetyo"/><br />
+        <b>Rayhanantha Akbar</b><br />
+        <b><i>Front-End & UI/UX</i></b>
+      </td>
     </tr>
   </tbody>
 </table>
+
+<hr>
+
+## Screenshots
 
 ![image](https://github.com/YuukioFuyu/campUS/assets/79379934/06decb16-9d05-4eed-ad16-9be968e40a5d)
 ![image](https://github.com/YuukioFuyu/campUS/assets/79379934/6241d387-1949-4acb-a954-36be777bb717)
