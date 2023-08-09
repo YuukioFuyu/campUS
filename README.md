@@ -22,19 +22,19 @@ Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
   <tbody>
   </tbody>
     <tr>
-      <td align="center" valign="top" width="30%">
+      <td align="center" valign="top" width="max">
         <a href="https://yuuki0.net"></a>
         <img src="https://avatars.githubusercontent.com/u/79379934?v=4?s=100" width="300px;" alt="ゆうきお ふゆ"/><br />
         <b>ゆうきお ふゆ</b><br />
         <b><i>Back-End & Database</i></b>
       </td>
-      <td align="center" valign="top" width="30%">
+      <td align="center" valign="top" width="max">
         <a href="https://github.com/AlvitoDian"></a>
         <img src="https://avatars.githubusercontent.com/u/132731944?v=4?s=100" width="300px;" alt="Alvito Dian Pratama Putra"/><br />
         <b>Alvito Dian Pratama Putra</b><br />
         <b><i>Back-End & Bug Hunter</i></b>
       </td>
-      <td align="center" valign="top" width="30%">
+      <td align="center" valign="top" width="max">
         <a href="https://github.com/rayhanantha"></a>
         <img src="https://avatars.githubusercontent.com/u/111292920?v=4?s=100" width="300px;" alt="Rayhanantha Akbar Putra Prasetyo"/><br />
         <b>Rayhanantha Akbar</b><br />
