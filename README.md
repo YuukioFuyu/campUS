@@ -1,7 +1,7 @@
-![Python](https://img.shields.io/badge/python-v3.11-black?style=for-the-badge&logo=python&labelColor=rgba(202%2C%20173%2C%200%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)
-![Flask](https://img.shields.io/badge/flask-v2.3.x-black?style=for-the-badge&logo=flask&labelColor=rgba(202%2C%20173%2C%200%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-v3.3.3-black?style=for-the-badge&logo=tailwindcss&labelColor=rgba(0%2C%20156%2C%20249%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)
-![DaisyUI](https://img.shields.io/badge/daisyui-v3.5.1-black?style=for-the-badge&logo=daisyui&labelColor=rgba(0%2C%20194%2C%2024%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)
+[![Python](https://img.shields.io/badge/python-v3.11-black?style=for-the-badge&logo=python&labelColor=rgba(202%2C%20173%2C%200%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/flask-v2.3.x-black?style=for-the-badge&logo=flask&labelColor=rgba(202%2C%20173%2C%200%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)](https://flask.palletsprojects.com/en/2.3.x/)
+[![TailwindCSS](https://img.shields.io/badge/tailwindcss-v3.3.3-black?style=for-the-badge&logo=tailwindcss&labelColor=rgba(0%2C%20156%2C%20249%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)](https://tailwindcss.com/)
+[![DaisyUI](https://img.shields.io/badge/daisyui-v3.5.1-black?style=for-the-badge&logo=daisyui&labelColor=rgba(0%2C%20194%2C%2024%2C%201)&link=https%3A%2F%2Fwww.python.org%2F)](https://daisyui.com/)
 
 
 
