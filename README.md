@@ -1,5 +1,9 @@
 # campUS
 Simple Feedback Web to Connect Students with Lecturers Based on Python FLASK
+
+![image](https://github.com/YuukioFuyu/campUS/assets/79379934/06decb16-9d05-4eed-ad16-9be968e40a5d)
+![image](https://github.com/YuukioFuyu/campUS/assets/79379934/6241d387-1949-4acb-a954-36be777bb717)
+
 <hr>
 
 ## Dependency
